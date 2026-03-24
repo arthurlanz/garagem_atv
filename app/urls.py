@@ -13,16 +13,17 @@ from rest_framework_simplejwt.views import (
 )
 
 from core.views import (
-    AcessorioViewSet, 
+    AcessorioViewSet,
+    CorViewSet,
     UserRegistrationView,
     UserViewSet,
 )
-
 
 router = DefaultRouter()
 
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r'acessorios', AcessorioViewSet, basename='acessorios')
+router.register(r'cores', CorViewSet, basename='cores')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
